@@ -2,6 +2,19 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138910674-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138910674-1');
+    </script>
+
     <title>Sleepy</title>
     <meta charset="UTF-8">
     <meta name="description" content="Bedtime Story App">
@@ -32,8 +45,14 @@
             </ul>
             <p>Click here to download the App</p>
             <div class="downloads">
-                <button><img src="PlayStore.svg"></button>
-                <button><img src="AppStore.svg"></button>
+                <button onclick="gtag('event', 'Clicks on download', {
+                    'event_category': 'Download',
+                    'event_label': 'PlayStore'
+                  });"><img src="PlayStore.svg"></button>
+                <button onclick="gtag('event', 'Clicks on download', {
+                    'event_category': 'Download',
+                    'event_label': 'AppStore'
+                  });"><img src="AppStore.svg"></button>
             </div>
         </div>
         <img class="smartphone" src="Smartphone.svg">
