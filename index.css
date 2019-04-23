@@ -11,6 +11,8 @@ header {
     height: 80px;
     /* box-shadow: 0px 20px 50px -20px #000000; */
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 header img {
@@ -18,16 +20,22 @@ header img {
     margin-left: 40px;
 }
 
-header a {
-    position: absolute;
-    top: 32px;
-    right: 40px;
-    text-decoration: none;
-    color: blue;
+header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 40px;
 }
 
-header a:nth-child(2) {
-    right: 140px;
+header li:first-child {
+    margin-right: 40px;
+}
+
+header li a {
+    text-decoration: none;
+    color: blue;
 }
 
 .landing {
@@ -92,5 +100,22 @@ button img {
 
     .downloads button {
         margin: 10px 0;
+    }
+
+    header {
+        height: 60px;
+    }
+
+    header img {
+        height: 60px;
+        margin-left: 20px;
+    }
+
+    header ul {
+        margin-right: 20px;
+    }
+
+    header li:first-child {
+        margin-right: 20px;
     }
 }
